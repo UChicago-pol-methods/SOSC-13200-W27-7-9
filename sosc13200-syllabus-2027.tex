@@ -1,0 +1,377 @@
+\documentclass[letterpaper, 12pt, parskip=full,DIV=10]{scrartcl}
+
+\title{SOSC 13200: Social Science Inquiry II.}
+\subtitle{University of Chicago, Winter 2027.}
+
+\RequirePackage{assets/template_MOW}
+\usepackage{xurl}
+\usepackage{needspace}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\begin{document}
+\nobibliography{assets/bib}
+\maketitle
+
+\vskip -10 ex
+
+\textbf{Location:} Campus North Residential Commons 158\\
+\textbf{Course time:} Tue/Thu 12:30--13:50 (Section 7); 14:00--15:20 (Section 9)\\
+\textbf{Course github:} \href{https://github.com/UChicago-pol-methods/SOSC-13200-W27-7-9}{\texttt{UChicago-pol-methods/SOSC-13200-W27-7-9}}
+
+\textbf{Instructor:} Molly Offer-Westort; \href{mailto:mollyow@uchicago.edu}{mollyow@uchicago.edu}\\
+\textbf{Office hours:} Book at \url{https://calendar.app.google/HA29eTYFs5qgeHFT8}\\
+\textbf{Office:} Pick Hall 328
+
+\paragraph{Course description and objectives.}
+In this course, you will learn to approach data thinking like a social scientist.
+That means thinking about where your data comes from and how it is measured, and assessing and describing relationships among variables.
+Throughout the course, you will be exposed to statistical tests and other quantitative methods used in social science research.
+You will also work with statistical software for data analysis and data visualization.
+
+This session of the course focuses on the theme of the ``credibility revolution'' in the social sciences:
+a move toward empirical studies built with deliberate data collection, rigorous research design, and appropriate strategies for analysis.
+The impact of this work was recognized by the 2021 Nobel prize in economics, awarded to David Card, Joshua Angrist, and Guido Imbens.
+We will also consider the contributions of carefully designed field experiments, and the work of 2019 economics Nobel prize winners, Abhijit Banerjee, Esther Duflo, and Michael Kremer.
+
+\Needspace{7\baselineskip}
+\paragraph{Textbooks.}
+\begin{itemize}
+\item Probability \& Statistics:
+\begin{itemize}
+\item \bibentry{stark1997sticigui}. Chapter and section assignments appear alongside each class in the course outline; additional references are marked optional. Interactive exercises and videos are optional. Contents: \url{https://www.stat.berkeley.edu/~stark/SticiGui/Text/toc.htm}\\
+This textbook is freely available online. 
+\end{itemize}
+\item Social science research: \bibentry{buenodemesquita2021thinking}. Chapter 5.
+\item Coding in R:
+\begin{itemize}
+\item \bibentry{wickhamggplot2online}. Online book: \url{https://ggplot2-book.org/}
+\end{itemize}
+\end{itemize}
+
+\paragraph{Mathematical proficiency.}
+It is not assumed that students have had prior exposure to probability and statistics, and this course will not use calculus or linear algebra.
+Familiarity with these topics may be useful in particular for some of the extra reference readings.
+
+\paragraph{Statistical software.}
+The statistical software used in this iteration of this class will be R, which we will use along with the RStudio interface.
+R is a statistical language and environment for data manipulation, calculation, and visualization; the software for R and RStudio are free to download online.
+R can be a very flexible and powerful tool, and it is widely used in statistical and social science research, as well as in some industry settings.
+Instructors in other sessions of this course may use Stata, which is also widely used and relevant in particular in the fields of economics and public policy.
+In general, basic familiarity with R, Stata, and python can be useful for research in the social sciences.
+You are not assumed to have prior experience with R for this class.
+
+\paragraph{Computing.}
+You will need access to a computer throughout the quarter with R and RStudio installed.
+If you do not have access to a private computer to install this software, University library computers are equipped with RStudio, and you should be able to save your assignments on Box while using these computers.
+If you have any issues with access to a computer, please reach out to me and we will find a solution.
+
+\paragraph{Course logistics.}
+The course discussion platform will be announced at the start of the quarter.
+Lecture materials, problem sets, and in-class code will be posted on the \href{https://github.com/UChicago-pol-methods/SOSC-13200-W27-7-9}{course GitHub page}.
+Problem set solutions will be posted after the due date on Canvas.
+
+\paragraph{Assignments.}
+Homework consists of eight assignments: two R analyses with compiled reports and six written assignments.
+Homeworks are graded on a 0--10 scale, with 80 raw points total.
+Homeworks are worth 20\% of the course grade. Participation is worth 10\%. The in-class midterm is worth 30\%, and the cumulative in-person final is worth 40\%.
+There is no take-home midterm or take-home final.
+
+\begin{center}
+\begin{tabular}{l l l}
+\textbf{Component} & \textbf{Weight} & \textbf{Due date} \\
+\hline
+Participation & 10\% & -- \\
+Homework 1 & 2.5\% & Fri, January 8 (11:59pm) \\
+Homework 2 & 2.5\% & Fri, January 15 (11:59pm) \\
+Homework 3 & 2.5\% & Fri, January 22 (11:59pm) \\
+Homework 4 & 2.5\% & Fri, January 29 (11:59pm) \\
+Homework 5 & 2.5\% & Fri, February 12 (11:59pm) \\
+Homework 6 & 2.5\% & Fri, February 19 (11:59pm) \\
+Homework 7 & 2.5\% & Fri, February 26 (11:59pm) \\
+Homework 8 & 2.5\% & Tue, March 2 (9:00am) \\
+Midterm & 30\% & Thu, February 4 (in class)\\
+Final (cumulative) & 40\% & Thu, March 4 (in class)\\
+\end{tabular}
+\end{center}
+
+The midterm covers Classes 1.1--4.2 and Homeworks 1--4. 
+There is no homework due during midterm week.
+The cumulative final covers the whole course. 
+Both exams are planned for 80 minutes.
+You may bring a non-programmable calculator to exams. 
+
+Submit assignments to Canvas as one readable PDF; Homeworks 2 and 5 also require your R script submitted as a separate .R file. 
+Write your name and section on each submission.
+Handwritten scans are welcome if legible, except for code-based assignments. 
+Unless an extension is arranged, late assignments lose one raw point per 24 hours for up to three days; no credit is given after the third day. 
+Extensions due to previously scheduled conflicts must be arranged at least one week before the assignment is due. 
+Extensions due to personal emergencies will be arranged on a case-by-case basis, but must be arranged before the due date. 
+
+Participation is assessed through preparation, substantive engagement with evidence, and brief individual written exercises.
+%The best fourteen of sixteen non-exam activity submissions count; speaking frequently is not required. 
+Computers and phones may not be used during ordinary class activities unless requested by the instructor or needed for an accommodation. 
+R work is completed outside class.
+
+\paragraph{Accommodations.}
+Please reach out to me directly if you would like to request accommodations for the course to better facilitate your learning.
+Student Disability Services (\url{https://disabilities.uchicago.edu/}) is also available to provide you resources and support, and may provide approval for specific academic accommodations.
+Informing me in a timely manner will help me to ensure accommodations are met and I am able to implement an appropriate assessment of your learning.
+
+\paragraph{Academic honesty.}
+All students are expected to be familiar with and follow the University\textquotesingle s academic honesty policies (\url{https://studentmanual.uchicago.edu/academic-policies/academic-honesty-plagiarism/}).
+You are responsible for understanding the code and ensuring it works correctly.
+On the two R assignments, AI may explain an error or help debug after your own attempt. Compose written interpretations yourself, disclose assistance, and verify the result. 
+
+Article and book-chapter readings will be provided in the course reader. Links are included for online materials.
+
+\section*{Course outline.}
+
+\subsection*{Week 1: Course introduction.}
+\subsubsection*{Class 1.1 (Tuesday 1/5).}
+\begin{itemize}
+\item Overview of course objective: how to formalize and test a theory with data and statistical tools.
+\item Some motivating examples.
+\item Introduction to coding: what the software will be, how you will download it, basics of setting yourself up with good directory hygiene.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{tabarrok2021credibility}. \href{https://marginalrevolution.com/marginalrevolution/2021/10/the-credibility-revolution-1.html}{Read online.}
+\end{itemize}
+
+\subsubsection*{Class 1.2 (Thursday 1/7).}
+\begin{itemize}
+\item What kinds of questions can we want to ask in social science research?
+How do we start formalizing a question that is tractable and falsifiable?
+What population is the question in reference to?
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{holland1986statistics}. Sections 1--4, 6--7 and 8.1 (Causation and Medicine); skip section 5, section 8.2, and the rejoinders.
+\end{itemize}
+
+\textbf{Homework 1 due Friday 1/8 at 11:59pm:}
+Counterfactuals and credible comparisons. Use Holland to analyze potential outcomes, random assignment, and the assumptions behind a natural comparison.
+
+\subsection*{Week 2: Summarizing data numerically and visually.}
+\subsubsection*{Class 2.1 (Tuesday 1/12).}
+\begin{itemize}
+\item Working with the Card and Krueger dataset, summarizing data numerically.
+Summaries of univariate data (sample mean, sample median, quantiles, sample variance, sample standard deviation).
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{cardkrueger1994minimum}. Introduction and data description, Tables 1--2 and the employment definition on p. 775.\begin{itemize}
+\item We will come back to this paper again in Week 7 to discuss the content and results; for this first pass, we will just focus on the data.
+\end{itemize}
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/histograms.htm}{Chapter 3: Statistics}: ``Data'' and ``Percentiles and Quartiles''; \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/location.htm}{Chapter 4: Measures of Location and Spread}: ``Measures of Location,'' ``Spread or Variability'' and ``The Range, IQR and SD.''
+\end{itemize}
+
+\subsubsection*{Class 2.2 (Thursday 1/14).}
+\begin{itemize}
+\item Working with the Card and Krueger dataset, summarizing data visually.
+\item Graphical representation of different types of univariate data: histograms, density plots, boxplot, bar charts.
+\item Challenges with measurement.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{adcockcollier2001measurement}. Introductory discussion.
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/histograms.htm}{Chapter 3: Statistics}: ``Histograms''; \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/scatterplots.htm}{Chapter 5: Multivariate Data and Scatterplots}: ``Scatterplots'' and ``Describing Scatterplots.''
+\end{itemize}
+
+\textbf{Homework 2 due Friday 1/15 at 11:59pm:}
+Reconstructing employment measures. Audit the Card and Krueger sample, reproduce descriptive results, compare employment measures, and assess their validity. Submit a pdf report and your R script.
+
+\subsection*{Week 3: Probability as a model of the world.}
+\subsubsection*{Class 3.1 (Tuesday 1/19).}
+\begin{itemize}
+\item How do we think about what it means for something to be random? Why is this mathematical abstraction useful for social science research?
+\item Overview of discrete probability.
+\item Conditional probability, Bayes Rule.
+\item Why understanding conditional probability is essential to understanding social phenomena, and why relying on your intuition can be wrong.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/probabilityAxioms.htm}{Chapter 17: Probability: Axioms and Fundaments}. Read ``The Axioms of Probability'' and ``Conditioning,'' including the subsections ``Conditional Probability,'' ``Independence,'' ``The Multiplication Rule,'' and ``Bayes' Rule.'' Include the worked examples; interactive exercises and videos are optional.
+\end{itemize}
+
+\subsubsection*{Class 3.2 (Thursday 1/21).}
+\begin{itemize}
+\item Using Angrist \& Krueger data to discuss identifying patterns in data, covariance, correlation.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{angrist1991does}. Introduction and Figures I--II (p. 983), with their discussion on pp. 982--984.
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/association.htm}{Chapter 6: Association}: ``Association of Pairs of Variables'' and ``Post Hoc Ergo Propter Hoc''; \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/correlation.htm}{Chapter 7: Correlation and Association}: ``The Correlation Coefficient.''
+\end{itemize}
+
+\textbf{Homework 3 due Friday 1/22 at 11:59pm:}
+Probability, birth cohorts, and schooling. Interpret the published figures, calculate conditional probabilities, and explain how cohort composition can reverse a comparison.
+
+\subsection*{Week 4: Uncertainty and inference.}
+\subsubsection*{Class 4.1 (Tuesday 1/26).}
+\begin{itemize}
+\item Sampling from a larger population; central limit theorem, one- and two-sample t-tests.
+\item Confidence intervals and sampling variation.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/standardError.htm}{Chapter 22: Standard Error}. Read the opening definition of standard error and the subsection ``The SE of the Sample Mean of n random Draws from a Box of numbered Tickets,'' including ``The Square-Root Law'' and the comparison of SE with SD.
+\item Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/confidenceIntervals.htm}{Chapter 26: Confidence Intervals}. Read the opening explanation of confidence intervals and coverage, followed by ``Approximate Confidence Intervals for the Population Mean.'' Read the text and worked examples; interactive exercises and videos are optional.
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/zTest.htm}{Chapter 30: Approximate Hypothesis Tests: the z Test and the t Test}: ``t Tests'' and ``Hypothesis Tests and Confidence Intervals.''
+\end{itemize}
+
+\subsubsection*{Class 4.2 (Thursday 1/28).}
+\begin{itemize}
+\item Using Butler and Broockman data, randomization inference, introduction to hypothesis testing, confidence intervals, p-values and statistical significance.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{butler2011politicians}. Box 1 and design on pp. 466--467, and Table 1 (p. 469).
+\item \bibentry{gerber2012field}. Chapter 3: Sampling Distributions, Statistical Inference, and Hypothesis Testing, Sections 3.1--3.5, pp. 51--70.
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/testing.htm}{Chapter 27: Hypothesis Testing: Does Chance explain the Results?}: ``Examples of Hypothesis Testing Problems,'' ``Test Statistics and P-values'' and ``Interpreting P-values.''
+\end{itemize}
+
+\textbf{Homework 4 due Friday 1/29 at 11:59pm:}
+Assignment mechanisms and uncertainty. Construct exact null distributions, compare assignment procedures, and interpret published evidence and confidence intervals.
+
+\subsection*{Week 5: Midterm.}
+\subsubsection*{Class 5.1 (Tuesday 2/2).}
+\begin{itemize}
+\item Midterm synthesis and review.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item Rework Homeworks 1--4 and the midterm practice distributed on Canvas. No new readings.
+\end{itemize}
+
+\subsubsection*{Class 5.2 (Thursday 2/4).}
+\begin{itemize}
+\item In-class midterm.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item No readings.
+\end{itemize}
+
+\subsection*{Week 6: Bivariate regression: best linear predictor.}
+\subsubsection*{Class 6.1 (Tuesday 2/9).}
+\begin{itemize}
+\item With Butler and Broockman data, regression as the best linear predictor, least squares visually demonstrated.
+\item Interpreting regression coefficients.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{buenodemesquita2021thinking}. Chapter 5: Regression for Describing and Forecasting.
+\end{itemize}
+
+\subsubsection*{Class 6.2 (Thursday 2/11).}
+\begin{itemize}
+\item Inference for linear regression.
+\item Linear regression with experiments and dummy variables; relationship to t-tests.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{pager2003mark}. Design on pp. 946--947 and Figure 6 (p. 958).
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/zTest.htm}{Chapter 30: Approximate Hypothesis Tests: the z Test and the t Test}: ``t Tests'' and ``Hypothesis Tests and Confidence Intervals.''
+\end{itemize}
+
+\textbf{Homework 5 due Friday 2/12 at 11:59pm:}
+Regression, evidence, and prediction. Derive and verify binary-predictor OLS results with Card and Krueger data, interpret robust uncertainty, and apply the identity to Pager. Submit a pdf report and your R script.
+
+\subsection*{Week 7: Multivariate regression: model building.}
+\subsubsection*{Class 7.1 (Tuesday 2/16).}
+\begin{itemize}
+\item Regression as linearization of conditional expectation function.
+\item With Banerjee et al. data, interpreting regression coefficients (and standard errors) in multivariate regression.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{banerjee2015miracle}. Introduction, interpretation and regression discussion on pp. 35--36, and Table 2 (p. 37).
+\end{itemize}
+
+\subsubsection*{Class 7.2 (Thursday 2/18).}
+\begin{itemize}
+\item When can we apply causal interpretations to regression coefficients from observational data?
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{cardkrueger1994minimum}.
+\begin{itemize}
+\item Return to Section III.A and Table 3 (p. 780) to examine their approach to analysis.
+\end{itemize}
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/experiments.htm}{Chapter 28: Does Treatment Have an Effect?}: ``The Method of Comparison,'' ``Confounding'' and ``Experiments and Observational Studies.''
+\end{itemize}
+
+\textbf{Homework 6 due Friday 2/19 at 11:59pm:}
+Controls and competing causal designs. Compare Banerjee et al.'s randomized design with Card and Krueger's trend comparison, including adjustment and sensitivity.
+
+\subsection*{Week 8: Statistical power and pre-registration.}
+\subsubsection*{Class 8.1 (Tuesday 2/23).}
+\begin{itemize}
+\item Statistical power, effect sizes, sample size.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{coppock2013power}. \url{https://methods.egap.org/guides/assessing-designs/power_en.html}
+\item \bibentry{athey2017econometrics}. Read Section 7.1, ``Power calculations,'' pp. 102--104. Focus on planning inputs and the equal-arm sample-size relationship; no derivation is required.
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/testing.htm}{Chapter 27}: ``Significance Level and Power'' and ``Statistical Significance and Practical Importance.''
+\end{itemize}
+
+\subsubsection*{Class 8.2 (Thursday 2/25).}
+\begin{itemize}
+\item Declaring hypotheses in advance / pre-analysis planning.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item \bibentry{chengradypreanalysis}. \url{https://methods.egap.org/guides/planning/pap_en.html}
+\item \bibentry{noy2023experimental}. Abstract and research design.
+\item \bibentry{noy2023planned}. \href{https://www.socialscienceregistry.org/versions/170369/docs/version/document}{Registered plan.} Read ``Outcome variables (at the task level)'' and ``Productivity Main Effects.'' Focus on the planned outcomes and comparisons; detailed regression syntax is not required.
+\item \textbf{Optional:} Stark, \textit{SticiGui}, \href{https://www.stat.berkeley.edu/~stark/SticiGui/Text/testing.htm}{Chapter 27}: ``Multiplicity and Data Mining.''
+\end{itemize}
+
+\textbf{Homework 7 due Friday 2/26 at 11:59pm:}
+Power and preanalysis planning. Audit Noy and Zhang's registered plan, assess recruitment and allocation choices, and write a feasible follow-up plan.
+
+\subsection*{Week 9: Review and cumulative final.}
+\textbf{Homework 8 due Tuesday 3/2 at 9:00am:}
+Compare evidence about employment. Evaluate the magnitudes, uncertainty, and identifying arguments in Pager and Card and Krueger, then propose a follow-up study in a policy memo.
+
+\subsubsection*{Class 9.1 (Tuesday 3/2).}
+\begin{itemize}
+\item Cumulative synthesis and final review.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item Rework Homework 8 and the final practice distributed on Canvas. No new readings.
+\end{itemize}
+
+\subsubsection*{Class 9.2 (Thursday 3/4).}
+\begin{itemize}
+\item In-class cumulative final.
+\end{itemize}
+
+\subsubsection*{Readings.}
+\begin{itemize}
+\item No readings.
+\end{itemize}
+
+
+\end{document}

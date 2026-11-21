@@ -1,0 +1,21 @@
+# Local instructor material and generated build files.
+private/
+tmp/
+.DS_Store
+__pycache__/
+local/
+exams/
+assessment/
+instructor/
+*solutions*
+*answer-key*
+*_key*
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk

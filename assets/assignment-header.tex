@@ -1,0 +1,14 @@
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{needspace}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small SOSC 13200}
+\fancyhead[R]{\small Winter 2027 draft}
+\fancyfoot[R]{\small\thepage}
+\setlength{\headheight}{15pt}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{6pt}
+\renewcommand{\headrulewidth}{0.3pt}
+\let\oldsection\section
+\renewcommand{\section}{\Needspace{5\baselineskip}\oldsection}
